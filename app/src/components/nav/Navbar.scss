@@ -1,0 +1,247 @@
+@import "../../styles";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  .nav-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    .logo {
+      margin-top: 40px;
+    }
+
+    .modal-and-buttons {
+      .auth-button {
+        border-radius: 50px;
+        width: 100px;
+        border: none;
+        margin: 10px 3px;
+        color: #fff;
+        background: $themeColorSecondary;
+      }
+      .modal-sing-up {
+        .modal-dialog {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .modal-content {
+            margin: 0;
+            border-radius: 20px;
+            .content {
+              height: 430px;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+
+              .sides {
+                width: 49%;
+                height: 100%;
+              }
+
+              .left-side {
+                position: relative;
+
+                .elipse {
+                  width: 250px;
+                  height: 250px;
+                  border-radius: 350px;
+                  top: 140px;
+                  right: 65px;
+                  background: #000;
+                  opacity: 0.1;
+                  position: absolute;
+                }
+                img {
+                  top: 26px;
+                  left: 30px;
+                  position: absolute;
+                  margin: 0 auto;
+                  display: block;
+                }
+              }
+
+              .right-side {
+                padding: 20px 10px;
+                position: relative;
+
+                form {
+                  margin: 0;
+
+                  .tittle {
+                    font-weight: 600;
+                  }
+
+                  .blue-button {
+                    border: none;
+                    background: none;
+                    padding: 0;
+                    color: rgb(47, 61, 255);
+                    cursor: pointer;
+                  }
+
+                  .password-label {
+                    margin-top: 10px;
+                  }
+
+                  input {
+                    height: 35px;
+                    @include inputRounded;
+                    width: 250px;
+                  }
+
+                  label {
+                    font-weight: 600;
+                  }
+
+                  .submit-button {
+                    margin-top: 10px;
+                    width: 250px;
+                    @include buttonPrimary;
+                  }
+
+                  .or-sing-up {
+                    margin-top: 10px;
+                  }
+                }
+
+                .close-button {
+                  position: absolute;
+                  top: 7px;
+                  right: 10px;
+                  padding: 0;
+                  border: none;
+                  background: none;
+                }
+              }
+
+              .divider {
+                background: rgb(236, 236, 236);
+                width: 1px;
+                height: 95%;
+              }
+            }
+          }
+        }
+      }
+
+      .modal-log-in {
+        .modal-dialog {
+          .modal-content {
+            border-radius: 20px;
+            .content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+
+              form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .tittle {
+                  font-weight: 600;
+                  margin-top: 20px;
+                }
+
+                .blue-button {
+                  border: none;
+                  background: none;
+                  padding: 0;
+                  color: rgb(47, 61, 255);
+                  cursor: pointer;
+                }
+
+                input {
+                  @include inputRounded;
+                  height: 35px;
+                  text-align: center;
+                }
+
+                .submit-button {
+                  @include buttonPrimary;
+                  margin-bottom: 20px;
+                  width: 250px;
+                  height: 35px;
+                  @include shadowDark;
+                }
+
+                .gmail-log-in {
+                  margin-bottom: 20px;
+                  button {
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              .close-button {
+                position: absolute;
+                top: 7px;
+                right: 10px;
+                padding: 0;
+                border: none;
+                background: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+
+    .link {
+      padding: 3px 15px;
+      border-radius: 50px;
+      color: #000;
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 5px 0;
+      transition: $transitionNormal;
+
+      .icon-container {
+        width: 70px;
+
+        font-size: 30px;
+
+        .MuiBadge-root {
+          margin: 0;
+        }
+        .MuiSvgIcon-root {
+          margin: 0;
+          font-size: 35px;
+        }
+      }
+
+      span {
+        text-transform: capitalize;
+        margin-left: 10px;
+      }
+    }
+
+    .link:hover {
+      outline: 2px solid $themeColorPrimary;
+      color: $themeColorPrimary;
+      transition: $transitionNormal;
+    }
+  }
+}

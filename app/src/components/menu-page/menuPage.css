@@ -1,0 +1,86 @@
+.menu-page .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 60px;
+}
+
+.menu-page .header .input-container {
+  padding: 10px 10px;
+  border-radius: 100px;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.menu-page .header .input-container input {
+  border: none;
+}
+
+.menu-page .header .input-container input:focus {
+  outline: none;
+}
+
+.menu-page .filter-buttons {
+  margin-top: 20px;
+}
+
+.menu-page .filter-buttons .filter-button {
+  position: relative;
+  width: 170px;
+  margin-right: 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+  color: #3f180a;
+  text-transform: uppercase;
+  background-color: #f9d523;
+  height: 45px;
+  padding: 0 20px;
+  text-align: start;
+}
+
+.menu-page .filter-buttons .filter-button img {
+  position: absolute;
+  top: 0;
+  right: -13px;
+  display: block;
+}
+
+.menu-page .filter-buttons .filter-button .pizza-image {
+  width: 55px;
+}
+
+.menu-page .filter-buttons .filter-button .burgers-image {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.menu-page .filter-buttons .filter-button .shakes-image {
+  width: 60px;
+  -webkit-transform: translateY(-17px);
+          transform: translateY(-17px);
+}
+
+.menu-page .filter-buttons .filter-button .all-image {
+  width: 100px;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.menu-page .product-grid {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+  margin-top: 50px;
+}
+/*# sourceMappingURL=menuPage.css.map */

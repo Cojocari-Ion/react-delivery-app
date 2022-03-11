@@ -1,0 +1,72 @@
+@import "../../styles";
+
+.menu-page {
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+    .input-container {
+      padding: 10px 10px;
+      border-radius: 100px;
+      background-color: #fff;
+      @include shadowDark;
+
+      input {
+        border: none;
+      }
+
+      input:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .filter-buttons {
+    margin-top: 20px;
+    
+    .filter-button {
+      position: relative;
+      width: 170px;
+      margin-right: 20px;
+      border-radius: 50px;
+      @include buttonPrimary;
+      height: 45px;
+      padding: 0 20px;
+      text-align: start;
+
+      img {
+        position: absolute;
+        top: 0;
+        right: -13px;
+        display: block;
+      }
+
+      .pizza-image {
+        width: 55px;
+      }
+      .burgers-image {
+        transform: translateY(-2px);
+      }
+
+      .shakes-image {
+        width: 60px;
+        transform: translateY(-17px);
+      }
+
+      .all-image {
+        width: 100px;
+        transform: translateY(-30px);
+      }
+    }
+  }
+
+  .product-grid {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    margin-top: 50px;
+  }
+}

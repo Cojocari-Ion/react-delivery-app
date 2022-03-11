@@ -1,0 +1,28 @@
+.App {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 730px;
+  background-color: #f6f6f6;
+}
+
+.App .navbar {
+  width: 20%;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.App .right-side {
+  width: 80%;
+  padding: 0 80px;
+}
+/*# sourceMappingURL=App.css.map */

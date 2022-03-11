@@ -1,0 +1,39 @@
+//paddings
+$padding1: 0 120px;
+
+//color
+$themeColorPrimary: #f9d523;
+$themeColorSecondary: #3f180a;
+$whiteColor: #f9f9f9;
+
+//text colors
+$darkText: rgb(59, 59, 59);
+
+//shadow
+
+@mixin shadowDark {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+// transitions
+$transitionNormal: 0.3s all;
+
+// button
+
+@mixin inputRounded {
+  border-radius: 50px;
+  padding: 0 20px;
+  border: none;
+  background: #f9f9f9;
+  @include shadowDark;
+}
+
+@mixin buttonPrimary {
+  font-weight: 600;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+  color: $themeColorSecondary;
+  text-transform: uppercase;
+  background-color: $themeColorPrimary;
+}

@@ -1,0 +1,331 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav-header .logo {
+  margin-top: 40px;
+}
+
+.navbar .nav-header .modal-and-buttons .auth-button {
+  border-radius: 50px;
+  width: 100px;
+  border: none;
+  margin: 10px 3px;
+  color: #fff;
+  background: #3f180a;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content {
+  margin: 0;
+  border-radius: 20px;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content {
+  height: 430px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .sides {
+  width: 49%;
+  height: 100%;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .left-side {
+  position: relative;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .left-side .elipse {
+  width: 250px;
+  height: 250px;
+  border-radius: 350px;
+  top: 140px;
+  right: 65px;
+  background: #000;
+  opacity: 0.1;
+  position: absolute;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .left-side img {
+  top: 26px;
+  left: 30px;
+  position: absolute;
+  margin: 0 auto;
+  display: block;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side {
+  padding: 20px 10px;
+  position: relative;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side form {
+  margin: 0;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side form .tittle {
+  font-weight: 600;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side form .blue-button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #2f3dff;
+  cursor: pointer;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side form .password-label {
+  margin-top: 10px;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side form input {
+  height: 35px;
+  border-radius: 50px;
+  padding: 0 20px;
+  border: none;
+  background: #f9f9f9;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  width: 250px;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side form label {
+  font-weight: 600;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side form .submit-button {
+  margin-top: 10px;
+  width: 250px;
+  font-weight: 600;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+  color: #3f180a;
+  text-transform: uppercase;
+  background-color: #f9d523;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side form .or-sing-up {
+  margin-top: 10px;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .right-side .close-button {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-sing-up .modal-dialog .modal-content .content .divider {
+  background: #ececec;
+  width: 1px;
+  height: 95%;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content {
+  border-radius: 20px;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content form .tittle {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content form .blue-button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #2f3dff;
+  cursor: pointer;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content form input {
+  border-radius: 50px;
+  padding: 0 20px;
+  border: none;
+  background: #f9f9f9;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  height: 35px;
+  text-align: center;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content form .submit-button {
+  font-weight: 600;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+  color: #3f180a;
+  text-transform: uppercase;
+  background-color: #f9d523;
+  margin-bottom: 20px;
+  width: 250px;
+  height: 35px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content form .gmail-log-in {
+  margin-bottom: 20px;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content form .gmail-log-in button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navbar .nav-header .modal-and-buttons .modal-log-in .modal-dialog .modal-content .content .close-button {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.navbar .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 70px;
+}
+
+.navbar .nav-menu .link {
+  padding: 3px 15px;
+  border-radius: 50px;
+  color: #000;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.navbar .nav-menu .link .icon-container {
+  width: 70px;
+  font-size: 30px;
+}
+
+.navbar .nav-menu .link .icon-container .MuiBadge-root {
+  margin: 0;
+}
+
+.navbar .nav-menu .link .icon-container .MuiSvgIcon-root {
+  margin: 0;
+  font-size: 35px;
+}
+
+.navbar .nav-menu .link span {
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.navbar .nav-menu .link:hover {
+  outline: 2px solid #f9d523;
+  color: #f9d523;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+/*# sourceMappingURL=Navbar.css.map */

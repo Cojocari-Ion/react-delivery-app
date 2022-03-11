@@ -1,0 +1,23 @@
+@import "./styles";
+
+.App {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  height: 730px;
+  background-color: #f6f6f6;
+
+  .navbar {
+    width: 20%;
+    background: #fff;
+    @include shadowDark;
+  }
+
+  .right-side {
+    width: 80%;
+    padding: 0 80px;
+  }
+}
