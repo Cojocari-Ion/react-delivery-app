@@ -6,8 +6,8 @@ import pizza from '../../assets/menu-buttons/pizza.png';
 import burger from '../../assets/menu-buttons/burger.png';
 import shake from '../../assets/menu-buttons/shake.png';
 import all from '../../assets/menu-buttons/all.png';
-import { db } from '../../utils/firebase';
-import { collection, getDocs } from 'firebase/firestore';
+
+
 
 const MenuPage = () => {
 
@@ -38,17 +38,6 @@ const MenuPage = () => {
     },
   ]
 
-  const userCollectionRef = collection(db, 'users');
-
-  useEffect(() => {
-    const getUser = async () => {
-      const data = await getDocs(userCollectionRef);
-      console.log(data)
-    }
-
-    getUser()
-  }, [])
-
   return (
     <div className='right-side menu-page'>
         <div className='header'>
@@ -66,7 +55,7 @@ const MenuPage = () => {
 
         <div className="filter-buttons">
           {buttons.map((button) => (
-            <button className={`filter-button fs-4 button-${button.title}`}>
+            <button key={button.id} className={`filter-button fs-4 button-${button.title}`}>
               {button.title}
               <img className={`image ${button.title}-image`} src={button.image} alt={button.image} width='50px' />
             </button>
