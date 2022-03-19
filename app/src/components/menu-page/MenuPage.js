@@ -6,6 +6,8 @@ import pizza from '../../assets/menu-buttons/pizza.png';
 import burger from '../../assets/menu-buttons/burger.png';
 import shake from '../../assets/menu-buttons/shake.png';
 import all from '../../assets/menu-buttons/all.png';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 
 
@@ -37,6 +39,19 @@ const MenuPage = () => {
     
     },
   ]
+
+  const [products, setProducts] = useState([]);
+  const userCollectionRef = collection(db, 'products');
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const data = await getDocs(userCollectionRef);
+      console.log(data)
+    }
+
+    getProducts()
+  })
+
 
   return (
     <div className='right-side menu-page'>
