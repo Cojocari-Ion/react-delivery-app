@@ -1,0 +1,30 @@
+.pagination-container {
+  padding: 20px;
+}
+
+.pagination-container .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.pagination-container .pagination .page-item {
+  margin: 5px;
+}
+
+.pagination-container .pagination .page-item .page-link {
+  background-color: #f9d523;
+  color: #3f180a;
+  font-weight: 600;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+/*# sourceMappingURL=Pagination.css.map */

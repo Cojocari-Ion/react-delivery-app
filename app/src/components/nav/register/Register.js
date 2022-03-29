@@ -60,6 +60,13 @@ const Register = () => {
         .catch(console.error)
     }
 
+    const handleKeypress = (e) => {
+        //it triggers by pressing the enter key
+      if (e.keyCode === 13) {
+        registerHandle();
+      }
+    };
+
     const provider = new GoogleAuthProvider();
 
     const signInWithGoogle = () => {
@@ -100,17 +107,17 @@ const Register = () => {
 
 
                     <div className="right-side sides">
-                        <form onSubmit={registerHandle} >
+                        <form onKeyPress={handleKeypress} onSubmit={registerHandle} >
                             <span className='fs-1 tittle'>
                                 Sign up
                             </span>
-                            <p className='fs-8'>If you have an account then <button data-bs-toggle="modal" data-bs-target="#exampleModal1" onClick={(e) => {e.preventDefault()}} data-bs-dismiss="modal" className='blue-button'>Log in</button> </p>
+                            <br />
                             <label className='username-label fs-5' htmlFor="email">Email:</label><br />
                             <input onChange={(e) => {setEmail(e.target.value)}} type="email" id="sign-in-email" name="email" placeholder='Your email' ></input>
                             <br />
 
                             <label className='password-label fs-5' htmlFor="password">Password:</label><br />
-                            <input onChange={(e) => {setPassword(e.target.value)}} type="password" id="sign-in-password" name="password" placeholder='Your Password' ></input>
+                            <input onKeyPress={handleKeypress} onChange={(e) => {setPassword(e.target.value)}} type="password" id="sign-in-password" name="password" placeholder='Your Password' ></input>
 
                             <br />
 
@@ -118,9 +125,11 @@ const Register = () => {
                                 submit
                             </button>
 
+                            <p className='fs-8'>If you have an account then <button data-bs-toggle="modal" data-bs-target="#exampleModal1" onClick={(e) => {e.preventDefault()}} tabindex="-1"data-bs-dismiss="modal" className='blue-button'>Log in</button></p>
+
                             <p className='or-sing-up'>Or sign up with:</p>
 
-                            <button data-bs-dismiss="modal" className='button-gmail' onClick={signInWithGoogle}>
+                            <button  data-bs-dismiss="modal" className='button-gmail' onClick={signInWithGoogle}>
                                 <img src={gmail} alt="gmail" />
 
                             </button>

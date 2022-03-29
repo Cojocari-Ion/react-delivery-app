@@ -1,0 +1,218 @@
+@import "../../styles";
+
+.cart-page {
+  padding: 0;
+  margin-top: 60px;
+
+  .clear-cart {
+    @include buttonPrimary;
+    padding: 10px 20px;
+    height: 60px;
+    margin-bottom: 50px;
+    transition: $transitionNormal;
+  }
+
+  .no-items {
+    margin-top: 50px;
+    font-weight: 600;
+    color: rgb(199, 199, 199);
+  }
+
+  .clear-cart:hover {
+    background: $themeColorSecondary;
+    color: $themeColorPrimary;
+    transition: $transitionNormal;
+  }
+
+  h1 {
+    margin: 0 0 20px 0;
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+
+    .row {
+      .right {
+        max-height: 850px;
+        background-color: #fff;
+        border-radius: 30px;
+        @include shadowDark;
+        padding: 10px 20px;
+        .payment-container {
+          .payment-header {
+            border-bottom: 1px solid rgb(189, 189, 189);
+            .fs-2 {
+              font-weight: 500;
+            }
+            .subtotal {
+              margin-top: 38px;
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .delivery {
+              margin-top: 12px;
+              margin-bottom: 38px;
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+
+          .payment {
+            border-bottom: 1px solid rgb(189, 189, 189);
+            .total {
+              margin-top: 20px;
+              display: flex;
+              justify-content: space-between;
+
+              .fs-2 {
+                font-weight: 500;
+              }
+            }
+
+            .payment-method {
+              margin-top: 20px;
+              .fs-2 {
+                font-weight: 500;
+              }
+
+              .method-list {
+                margin: 20px 0 20px 0;
+                .method {
+                  margin-top: 7px;
+                  display: flex;
+                  justify-content: space-between;
+
+                  .left-side {
+                    input {
+                      height: 16px;
+                      width: 16px;
+                      border-radius: 5px;
+                    }
+                    .fs-5 {
+                      margin-left: 5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          form {
+            margin-top: 10px;
+            .form-top {
+              input {
+                width: 100%;
+                border: 1px solid rgb(173, 173, 173);
+                border-radius: 5px;
+                padding: 3px 10px;
+              }
+
+              label {
+                margin-top: 10px;
+              }
+            }
+
+            .card-bot {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 10px;
+              input {
+                width: 100%;
+                border: 1px solid rgb(173, 173, 173);
+                border-radius: 5px;
+                padding: 3px 10px;
+                margin: 0;
+              }
+
+              .expiration {
+                margin-right: 10px;
+              }
+            }
+
+            .submit-button {
+              border: none;
+              border-radius: 100px;
+              padding: 0 30px;
+              text-transform: uppercase;
+              font-weight: 500;
+              background: $themeColorPrimary;
+              color: $themeColorSecondary;
+              transition: $transitionNormal;
+              margin: 30px auto;
+              display: block;
+            }
+
+            .submit-button:hover {
+              color: $themeColorPrimary;
+              background: $themeColorSecondary;
+              transition: $transitionNormal;
+            }
+          }
+        }
+      }
+
+      .left {
+        article {
+          background-color: #fff;
+          margin-bottom: 17px;
+          border-radius: 30px;
+          @include shadowDark;
+          padding: 13px 16px 13px 13px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .image-container {
+            img {
+              height: 140px;
+              object-fit: cover;
+              border-radius: 22px;
+            }
+          }
+
+          .info {
+            margin-left: 10px;
+            padding: 10px 0 0;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .top {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              h3 {
+                font-weight: 600;
+                text-transform: capitalize;
+              }
+
+              button {
+                color: #d8b923;
+                text-transform: uppercase;
+                border: none;
+                background: none;
+                font-size: 13px;
+              }
+            }
+
+            .bottom {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              p {
+                width: 70%;
+              }
+
+              .price {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

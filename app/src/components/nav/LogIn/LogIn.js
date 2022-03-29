@@ -3,8 +3,9 @@ import { useState } from 'react';
 import gmail from '../../../assets/nav/gmail.png';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../../../store/slice/userSlice';
+import { setError } from '../../../store/slice/errorSlice';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 const LogIn = () => {
@@ -16,50 +17,52 @@ const LogIn = () => {
 
     const dispatch = useDispatch();
 
+    const isVisible = useSelector(state => state.error)
+
     const logInHandle = (e) => {
-        //e.preventDefault()
-        //const auth = getAuth();
-        //
-        //createUserWithEmailAndPassword(auth, email, password)
-        //.then(({user}) => {
-        //    
-        //    dispatch(setUser({
-        //        email: user.email,
-        //        id: user.uid,
-        //        token: user.accessToken,
-        //    }));
-        //    navigate('/');
-        //})
-        //.catch(console.error)
+        
         e.preventDefault()
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            console.log(user)
+            
+            dispatch(setUser({
+                email: user.email,
+                id: user.uid,
+                token: user.accessToken,
+            }));
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            alert(error.code)
+
+            dispatch(setError());
         });
     }
 
+    const handleKeypress = e => {
+        //it triggers by pressing the enter key
+      if (e.keyCode === 13) {
+        logInHandle();
+      }
+    };
+
     
-
-
   return (
     <div className="modal fade modal-log-in" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className=" modal-dialog modal-dialog-centered modal-md">
             <div className=" modal-content">
                 <div className=" content">
 
-                    <form onSubmit={logInHandle}> 
+                    <form onKeyPress={handleKeypress}  onSubmit={logInHandle}> 
+
                         <span className='fs-1 tittle'>
                             Log in
                         </span>
-                        <p className='fs-8'>If you haven't an account then <button data-bs-toggle="modal" data-bs-target="#exampleModal2" onClick={(e) => {e.preventDefault()}} data-bs-dismiss="modal" className='blue-button'>Sing up</button> </p>
+
+                        
                         <label className='username-label fs-5' htmlFor="username">Username:</label>
                         <input onChange={(e) => {setEmail(e.target.value)}} type="text" id="log-in-username" name="username" placeholder='Your Username' ></input>
 
@@ -70,6 +73,11 @@ const LogIn = () => {
 
                         <br />
 
+
+                        <button data-bs-dismiss="modal"  className='fs-5 submit-button' type='submit'>
+                            submit
+                        </button>
+                        
                         <div className='gmail-log-in'>
                             <span>log in with</span>
                             <button>
@@ -78,18 +86,13 @@ const LogIn = () => {
                             </button>
                         </div>
 
-                        <button  className='fs-5 submit-button' type='submit'>
-                            submit
-                        </button>
+                        <p className='fs-8'>If you haven't an account then <button data-bs-toggle="modal" data-bs-target="#exampleModal2" onClick={(e) => {e.preventDefault()}} data-bs-dismiss="modal" className='blue-button'>Sing up</button> </p>
 
-                        
                     </form>
 
                     <button data-bs-dismiss="modal" className='close-button'>
                         <CancelRoundedIcon />
                     </button>
-                
-
                 </div>
             </div>
         </div>

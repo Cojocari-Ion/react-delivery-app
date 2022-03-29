@@ -7,18 +7,24 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 730px;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  min-height: 730px;
   background-color: #f6f6f6;
+  position: relative;
 }
 
 .App .navbar {
+  z-index: 1;
   width: 20%;
+  height: 100%;
   background: #fff;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .App .right-side {

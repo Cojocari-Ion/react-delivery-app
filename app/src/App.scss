@@ -6,14 +6,20 @@
   overflow: hidden;
   font-family: "Poppins", sans-serif;
   display: flex;
-  flex-direction: row;
-  height: 730px;
+  flex-direction: row-reverse;
+  min-height: 730px;
   background-color: #f6f6f6;
+  position: relative;
 
   .navbar {
+    z-index: 1;
     width: 20%;
+    height: 100%;
     background: #fff;
     @include shadowDark;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .right-side {
